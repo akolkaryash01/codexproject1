@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truth Shield | AI vs Real Media Detector</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <h1>Truth Shield</h1>
+        <p>
+          Upload a photo or video to estimate whether it is AI-generated or real.
+          Scores are returned on a <strong>0-10 scale</strong>.
+        </p>
+      </header>
+
+      <section class="panel uploader-panel">
+        <label for="mediaInput" class="upload-label">Choose image or video</label>
+        <input id="mediaInput" type="file" accept="image/*,video/*" />
+        <p class="helper-text">
+          Supported: common image/video formats. Analysis runs locally in your browser.
+        </p>
+      </section>
+
+      <section class="panel preview-panel">
+        <h2>Preview</h2>
+        <div id="previewContainer" class="preview-container">
+          <p class="placeholder">No file selected yet.</p>
+        </div>
+      </section>
+
+      <section class="panel result-panel">
+        <h2>Detection Result</h2>
+        <div class="score-row">
+          <span class="score-label">AI-generated probability (0-10):</span>
+          <span id="aiScore" class="score-value">-</span>
+        </div>
+        <div class="score-row">
+          <span class="score-label">Real-media probability (0-10):</span>
+          <span id="realScore" class="score-value">-</span>
+        </div>
+        <div id="verdict" class="verdict">Upload media to begin analysis.</div>
+        <ul id="signalList" class="signal-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
