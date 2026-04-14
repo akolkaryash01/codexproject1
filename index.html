@@ -1,50 +1,132 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Truth Shield | AI vs Real Media Detector</title>
+    <title>CitrusCraft | Luxury Leather from Nature's Waste</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <header>
-        <h1>Truth Shield</h1>
-        <p>
-          Upload a photo or video to estimate whether it is AI-generated or real.
-          Scores are returned on a <strong>0-10 scale</strong>.
-        </p>
-      </header>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="logo" href="index.html">CitrusCraft</a>
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="themeToggle" class="btn btn-ghost" type="button">Dark Mode</button>
+          <a href="shop.html#collection" class="cart-pill">Cart <span id="cartCount">0</span></a>
+        </div>
+      </nav>
+    </header>
 
-      <section class="panel uploader-panel">
-        <label for="mediaInput" class="upload-label">Choose image or video</label>
-        <input id="mediaInput" type="file" accept="image/*,video/*" />
-        <p class="helper-text">
-          Supported: common image/video formats. Analysis runs locally in your browser.
-        </p>
-      </section>
-
-      <section class="panel preview-panel">
-        <h2>Preview</h2>
-        <div id="previewContainer" class="preview-container">
-          <p class="placeholder">No file selected yet.</p>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Luxury Leather from Nature's Waste</p>
+            <h1>Reinventing Leather with Orange Waste</h1>
+            <p>
+              CitrusCraft transforms discarded orange peels into premium vegan leather for timeless
+              accessories.
+            </p>
+            <div class="hero-ctas">
+              <a href="shop.html" class="btn">Shop Now</a>
+              <a href="shop.html#collection" class="btn btn-ghost">Explore Collection</a>
+            </div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1200&q=80"
+            alt="Luxury orange-toned leather accessories"
+            class="hero-image"
+          />
         </div>
       </section>
 
-      <section class="panel result-panel">
-        <h2>Detection Result</h2>
-        <div class="score-row">
-          <span class="score-label">AI-generated probability (0-10):</span>
-          <span id="aiScore" class="score-value">-</span>
+      <section class="section container" id="featured">
+        <div class="section-head">
+          <h2>Featured Products</h2>
+          <a href="shop.html" class="text-link">View all</a>
         </div>
-        <div class="score-row">
-          <span class="score-label">Real-media probability (0-10):</span>
-          <span id="realScore" class="score-value">-</span>
+        <div class="product-grid">
+          <article class="product-card animate-up">
+            <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=900&q=80" alt="Vegan belt" />
+            <div>
+              <h3>Amber Edge Belt</h3>
+              <p>$129 · Orange peel leather</p>
+              <button class="btn add-to-cart" data-product="Amber Edge Belt" data-price="129">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card animate-up">
+            <img src="https://images.unsplash.com/photo-1614179689702-355944cd0918?auto=format&fit=crop&w=900&q=80" alt="Vegan wallet" />
+            <div>
+              <h3>Valencia Fold Wallet</h3>
+              <p>$98 · Orange peel leather</p>
+              <button class="btn add-to-cart" data-product="Valencia Fold Wallet" data-price="98">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product-card animate-up">
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=80" alt="Small pocket pouch" />
+            <div>
+              <h3>Clementine Pocket Pouch</h3>
+              <p>$76 · Orange peel leather</p>
+              <button class="btn add-to-cart" data-product="Clementine Pocket Pouch" data-price="76">Add to Cart</button>
+            </div>
+          </article>
         </div>
-        <div id="verdict" class="verdict">Upload media to begin analysis.</div>
-        <ul id="signalList" class="signal-list"></ul>
+      </section>
+
+      <section class="section alt">
+        <div class="container two-col">
+          <div>
+            <h2>Material Innovation</h2>
+            <p>
+              We dry and powder orange peels, then blend them with natural resins to create durable,
+              luxurious vegan leather.
+            </p>
+            <a class="btn btn-ghost" href="sustainability.html">Read Sustainability Story</a>
+          </div>
+          <div class="stat-card">
+            <h3>Why CitrusCraft</h3>
+            <ul>
+              <li>Biodegradable and cruelty-free</li>
+              <li>Premium hand-finished textures</li>
+              <li>Reduced agricultural waste footprint</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <h2>Testimonials</h2>
+        <div class="testimonial-grid">
+          <blockquote>
+            “CitrusCraft feels ultra-premium and aligns with my values.”
+            <cite>— Nora, New York</cite>
+          </blockquote>
+          <blockquote>
+            “Elegant design with a true sustainability story, finally.”
+            <cite>— Evan, San Francisco</cite>
+          </blockquote>
+          <blockquote>
+            “My daily wallet has aged beautifully without compromise.”
+            <cite>— Priya, Chicago</cite>
+          </blockquote>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p><strong>CitrusCraft</strong> · Luxury Leather from Nature's Waste</p>
+        <p>© 2026 CitrusCraft. Crafted responsibly.</p>
+      </div>
+    </footer>
 
     <script src="app.js"></script>
   </body>
